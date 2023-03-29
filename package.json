@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "vue": "^3.2.47",
-    "vue-multiselect": "^2.1.7",
     "vue3-star-ratings": "^1.1.0"
   },
   "devDependencies": {
