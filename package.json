@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.2.47",
+    "vue-select": "^4.0.0-beta.6",
     "vue3-star-ratings": "^1.1.0"
   },
   "devDependencies": {
