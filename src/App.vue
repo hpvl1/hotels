@@ -1,11 +1,13 @@
 <script setup>
-
+import Main from './views/Main.vue';
 </script>
 
 <template>
   <div>
-  </div> 
+    <Suspense>
+      <Main />
+    </Suspense>
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
