@@ -15,10 +15,7 @@ const state = reactive({
 state.hotels = await loadHotels();
  
 function sortHotelsByCountries(countries) {
-  if (countries === undefined) {
-    console.log("state.hotels: ", state.hotels);
-    return state.hotels;
-  }
+  if (countries === undefined) return state.hotels;
   state.hotels = countries;
   return state.hotels;
 }
