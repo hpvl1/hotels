@@ -23,7 +23,7 @@ const hotels = reactive(props.hotels);
 </script>
 
 <template>
-  <div>
+  <div class="hotel">
     <!-- <div v-for="(hotel, index) in hotels" :key="index" class="hotel"> -->
         <HotelName class="hotel__name">Name: {{ hotels.name }}</HotelName>
         <HotelPrice class="hotel__price">Price: {{ hotels.min_price }}</HotelPrice>
@@ -40,7 +40,8 @@ const hotels = reactive(props.hotels);
 .hotel {
   width: 835px;
   height: 155px;
-
+  margin: 20px 10px;
+  padding: 15px 15px;
   border: 1px solid #eaeaea;
   border-radius: 15px;
 }
