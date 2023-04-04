@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, defineProps, toRefs } from 'vue';
+import { reactive, defineProps } from 'vue';
 
 import { loadHotels } from '/src/api/index.js';
 
@@ -24,15 +24,15 @@ const hotels = reactive(props.hotels);
 
 <template>
   <div>
-    <div v-for="(hotel, index) in hotels" :key="index" class="hotel">
-        <HotelName class="hotel__name">Name: {{ hotel.name }}</HotelName>
-        <HotelPrice class="hotel__price">Price: {{ hotel.min_price }}</HotelPrice>
-        <HotelCountry class="hotel__country">Country: {{  hotel.country  }}</HotelCountry>
-        <HotelType class="hotel__type">Type: {{ hotel.type}}</HotelType>
-        <HotelReviews class="hotel__reviews">Reviews: {{ hotel.reviews_amount }}</HotelReviews>
-        <HotelDescription class="hotel__description">Desc: {{ hotel.description }}</HotelDescription>
-        <HotelStars class="hotel__stars" v-model="hotel.stars"/>
-    </div>
+    <!-- <div v-for="(hotel, index) in hotels" :key="index" class="hotel"> -->
+        <HotelName class="hotel__name">Name: {{ hotels.name }}</HotelName>
+        <HotelPrice class="hotel__price">Price: {{ hotels.min_price }}</HotelPrice>
+        <HotelCountry class="hotel__country">Country: {{ hotels.country  }}</HotelCountry>
+        <HotelType class="hotel__type">Type: {{ hotels.type}}</HotelType>
+        <HotelReviews class="hotel__reviews">Reviews: {{ hotels.reviews_amount }}</HotelReviews>
+        <HotelDescription class="hotel__description">Desc: {{ hotels.description }}</HotelDescription>
+        <HotelStars class="hotel__stars" v-model="hotels.stars"/>
+    <!-- </div> -->
   </div>
 </template>
 
