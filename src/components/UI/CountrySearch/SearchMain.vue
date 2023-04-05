@@ -30,14 +30,14 @@ const sortCountryName = computed(() => {
 const findCountryByName = computed(() => {
   const countries = [];
 
-  if (state.countries.length == 0 || state.selectedCountries.length == 0) return countries;
+  if (state.countries.length == 0 || state.selectedCountries.length == 0) return;
   let i = 0;
   let j;
   while (i < state.countries.length) {
     // для каждого элемента state.countries
     j = 0;
     while (j < state.selectedCountries.length) {
-      if (state.countries[i].name == state.selectedCountries[j]) {
+      if (state.countries[i].name === state.selectedCountries[j]) {
         countries.push(state.countries[i].name);
         break;
       }
@@ -53,6 +53,7 @@ function setCountryFilter() {
   if (state.hotels.length == 0 || state.selectedCountries.length == 0) return state.hotels;
   let i = 0;
   let j;
+  state.newHotels = [];
   while (i < state.hotels.length) {
     // для каждого элемента state.hotels
     j = 0;
